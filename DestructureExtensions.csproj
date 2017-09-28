@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>DestructureExtensions</PackageId>
+    <Authors>Daniel James</Authors>
+    <Description>Destructuring extension methods for awesome C#</Description>
+    <Copyright>2017 Daniel James</Copyright>
+    <PackageLicenseUrl />
+  </PropertyGroup>
+
+</Project>
