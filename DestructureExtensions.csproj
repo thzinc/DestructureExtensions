@@ -11,6 +11,7 @@
     <PackageProjectUrl>https://github.com/thzinc/DestructureExtensions</PackageProjectUrl>
     <RepositoryUrl>https://github.com/thzinc/DestructureExtensions</RepositoryUrl>
     <PackageTags>c#,c#7,destructure,destructuring,sugar</PackageTags>
+    <Version>0.0.0</Version>
   </PropertyGroup>
 
 </Project>
