@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard1.0</TargetFrameworks>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageId>DestructureExtensions</PackageId>
     <Authors>Daniel James</Authors>
     <Description>Destructuring extension methods for awesome C#</Description>
