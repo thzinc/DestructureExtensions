@@ -9,6 +9,6 @@ script:
   - dotnet restore
   - dotnet build
   - "if [[ $TRAVIS_PULL_REQUEST == 'false' && $TRAVIS_TAG ]]; then 
-  dotnet pack ./DestructureExtensions --configuration Release /p:Version=$TRAVIS_TAG;
-  nuget push ./DestructureExtensions/bin/Release/*.nupkg -ApiKey $NUGET_API_KEY;
+  dotnet pack . --configuration Release /p:Version=$TRAVIS_TAG;
+  nuget push ./bin/Release/*.nupkg -ApiKey $NUGET_API_KEY;
   fi"
