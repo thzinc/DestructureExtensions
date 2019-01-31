@@ -1,14 +1,19 @@
 language: csharp
-
+mono: none
+dotnet: 2.1.402
 os: linux
-dist: trusty
-sudo: required
-dotnet: 2.0.0
+git:
+  depth: false
+
+before_install:
+  - curl -sL https://github.com/annymsMthd/gogitver/releases/download/0.5.1/linux.tar.gz | tar zx
+
+before_script:
+  - git fetch -tv
+  - git fetch origin master:master
 
 script:
-  - dotnet restore
-  - dotnet build --configuration Release
-  - "if [[ $TRAVIS_PULL_REQUEST == 'false' && $TRAVIS_TAG ]]; then 
-  dotnet pack . --configuration Release /p:Version=$TRAVIS_TAG;
-  nuget push ./bin/Release/*.nupkg -ApiKey $NUGET_API_KEY;
-  fi"
+  - dotnet restore || travis_terminate 1
+  - dotnet test --no-restore tests/DestructureExtensions.Tests || travis_terminate 1
+  - dotnet pack --no-restore src/DestructureExtensions --configuration Release /p:Version=$(./gogitver) || travis_terminate 1
+  - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then dotnet nuget push src/DestructureExtensions/bin/Release/*.nupkg -s https://www.nuget.org/api/v2/package -k $NUGET_API_KEY || travis_terminate 1; fi
