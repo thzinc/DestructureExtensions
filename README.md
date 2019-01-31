@@ -27,11 +27,12 @@ var tasks = Enumerable.Range(1, 10).Select(Task.FromResult);
 var results = await tasks.WhenAll();
 ```
 
+More examples in the [unit tests](./tests/DestructureExtensions.Tests).
+
 ## Building
 
 [![Travis](https://img.shields.io/travis/thzinc/DestructureExtensions.svg)](https://travis-ci.org/thzinc/DestructureExtensions)
 [![NuGet](https://img.shields.io/nuget/v/DestructureExtensions.svg)](https://www.nuget.org/packages/DestructureExtensions/)
-[![NuGet Pre Release](https://img.shields.io/nuget/vpre/DestructureExtensions.svg)](https://www.nuget.org/packages/DestructureExtensions/)
 
 Ensure you have [installed .NET Core](https://www.microsoft.com/net/core)
 
@@ -55,7 +56,7 @@ We welcome contributions and collaboration on this project. Please read our [con
 
 ## License and Authors
 
-[![Daniel James logo](https://secure.gravatar.com/avatar/eaeac922b9f3cc9fd18cb9629b9e79f6.png?size=16) Daniel James](http://thzinc.com)
+[![Daniel James logo](https://secure.gravatar.com/avatar/eaeac922b9f3cc9fd18cb9629b9e79f6.png?size=16) Daniel James](https://thzinc.com)
 
 [![license](https://img.shields.io/github/license/thzinc/DestructureExtensions.svg)](https://github.com/thzinc/DestructureExtensions/blob/master/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/thzinc/DestructureExtensions.svg)](https://github.com/thzinc/DestructureExtensions/graphs/contributors)
