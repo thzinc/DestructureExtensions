@@ -16,6 +16,15 @@ var (first, _, third, rest) = stringToSplit.Split(',');
 // first == "foo"
 // third == "bam"
 // rest == IEnumerable<string> containing "baz"
+
+var one = Task.FromResult(1);
+var two = Task.FromResult("foo");
+var three = Task.FromResult(DateTimeOffset.Now);
+
+var (first, second, third) = await (one, two, three).WhenAll();
+
+var tasks = Enumerable.Range(1, 10).Select(Task.FromResult);
+var results = await tasks.WhenAll();
 ```
 
 ## Building
