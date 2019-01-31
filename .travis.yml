@@ -1,7 +1,8 @@
 language: csharp
 mono: none
-dotnet: 2.1.402
+dotnet: 2.2
 os: linux
+dist: xenial
 git:
   depth: false
 
