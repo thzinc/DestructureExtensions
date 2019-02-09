@@ -25,6 +25,17 @@ var (first, second, third) = await (one, two, three).WhenAll();
 
 var tasks = Enumerable.Range(1, 10).Select(Task.FromResult);
 var results = await tasks.WhenAll();
+
+var dictionary = new Dictionary<string, int>()
+{
+    { "one", 1 },
+    { "two", 2 },
+    { "three", 3 },
+}
+foreach (var (key, value) in dictionary)
+{
+    // ...
+}
 ```
 
 More examples in the [unit tests](./tests/DestructureExtensions.Tests).
